@@ -1,35 +1,42 @@
-!!!
-%html
-  %head
-    %title ERP Dashboard
-    %style
-      :css
-        body {
-          margin: 0;
-          padding: 0;
-          font-family: Arial, sans-serif;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          background-color: #f5f5f5;
-          position: relative;
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ERP Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      position: relative;
+    }
 
-        .title {
-          font-size: 36px;
-          font-weight: bold;
-        }
+    .dashboard-title {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+    }
 
-        .chatbot-container {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          z-index: 1000;
-        }
+    .chatbot-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-title">ERP Dashboard</div>
 
-  %body
-    .title ERP Dashboard
+  <!-- Chatbot Script in a fixed container -->
+  <div class="chatbot-container">
+    <script src="https://cdn.jotfor.ms/agent/embedjs/0196cd7fda727c45a461a75b161c34b3c38e/embed.js?skipWelcome=1&maximizable=1"></script>
+  </div>
+</body>
+</html>
 
-    .chatbot-container
-      %script{src: "https://cdn.jotfor.ms/agent/embedjs/0196cd7fda727c45a461a75b161c34b3c38e/embed.js?skipWelcome=1&maximizable=1"}
